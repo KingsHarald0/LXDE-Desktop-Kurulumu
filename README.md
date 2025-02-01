@@ -68,7 +68,7 @@ Burada varsayılan ekran yöneticisi olarak LightDM’i seçebilirsiniz.
 
 XRDP kurun
 ```bash
-   sudo apt install xrdp -y 
+sudo apt install xrdp -y 
 ```
 XRDP başlangıç dosyasını düzenleyin
 ```bash
@@ -94,9 +94,12 @@ exec startlxde
 XRDP servislerini yeniden başlatın ve güvenlik duvarı ayarlarını yapın:
 ```bash
 sudo systemctl restart xrdp
+```
+```bash
 sudo ufw allow 3389/tcp
 ```
-5. Tarayıcı Kurulumu
+## 5. Tarayıcı Kurulumu ##
+
 Chrome
 Brave
 Edge
