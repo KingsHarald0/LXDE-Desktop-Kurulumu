@@ -15,33 +15,39 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install curl iptables build-essential git wget jq make gcc nano tmux htop nvme-cli pkg-config libssl-dev libleveldb-dev tar clang bsdmainutils ncdu unzip libleveldb-dev screen -y
 ```
 
-# SwapSpace oluşturma(Opsiyonel)
+## SwapSpace oluşturma(Opsiyonel) ##
 > **Not**: Düşük kapasiteli sunucularda ram yükünü azaltmanıza yardımcı olur.
 
 # Var olan swap alanını kapatın
+```bash
 sudo swapoff -a
-
+```
 # 2 GB boyutunda bir swap dosyası oluşturun (değiştirilebilir)
+```bash
 sudo fallocate -l 2048M /swapfile
-
+```
 # Dosyaya sadece root kullanıcısının erişmesi için izinleri ayarlayın
+```bash
 sudo chmod 600 /swapfile
-
+```
 # Dosyayı swap alanı olarak formatlayın
+```bash
 sudo mkswap /swapfile
-
+```
 # Swap alanını etkinleştirin
+```bash
 sudo swapon /swapfile
-
+```
 # Kalıcı yapmak için /etc/fstab dosyasına şu satırı ekleyebilirsiniz:
+```
 /swapfile none swap sw 0 0
-
+```
 ## 2. LXDE Masaüstü Kurulumu ve Yeni Kullanıcı Ekleme
 
 Yeni bir kullanıcı oluşturun(örnek kullanıcı adı: `k`):
 
-   ```bash
-   sudo adduser k 
+```bash
+sudo adduser k 
 ```
 
 Yeni kullanıcıya sudo yetkisi verin:
