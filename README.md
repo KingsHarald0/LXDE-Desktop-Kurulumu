@@ -52,12 +52,12 @@ sudo adduser k
 Yeni kullanıcıya sudo yetkisi verin:
 ```bash
 sudo usermod -aG sudo k
-LXDE masaüstünü kurun:
 ```
+LXDE masaüstünü kurun:
 ```bash
 sudo apt install lxde -y
-LightDM (giriş yöneticisi) kurun ve varsayılan olarak yapılandırın:
 ```
+LightDM (giriş yöneticisi) kurun ve varsayılan olarak yapılandırın:
 ```bash
 sudo apt install lightdm -y
 sudo dpkg-reconfigure lightdm
