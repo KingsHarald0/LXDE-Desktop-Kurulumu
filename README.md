@@ -1,6 +1,6 @@
-# LXDE Kurulum ve Uzaktan Erişim (XRDP/VNC) Rehberi
+# LXDE Kurulum ve Uzaktan Erişim (XRDP) Rehberi
 
-Bu rehberde, Ubuntu (veya Ubuntu tabanlı dağıtımlarda) LXDE masaüstü ortamını kurmayı ve uzaktan masaüstü erişimi için XRDP/VNC yapılandırmasını adım adım anlatacağız.
+Bu rehberde, Ubuntu (veya Ubuntu tabanlı dağıtımlarda) LXDE masaüstü ortamını kurmayı ve uzaktan masaüstü erişimi için XRDP yapılandırmasını adım adım anlatacağız.
 
 ---
 
@@ -18,38 +18,37 @@ sudo apt install curl iptables build-essential git wget jq make gcc nano tmux ht
 ## SwapSpace oluşturma(Opsiyonel) ##
 > **Not**: Düşük kapasiteli sunucularda ram yükünü azaltmanıza yardımcı olur.
 
-# Var olan swap alanını kapatın
+Var olan swap alanını kapatın
 ```bash
 sudo swapoff -a
 ```
-# 2 GB boyutunda bir swap dosyası oluşturun (değiştirilebilir)
+2 GB boyutunda bir swap dosyası oluşturun (değiştirilebilir)
 ```bash
 sudo fallocate -l 2048M /swapfile
 ```
-# Dosyaya sadece root kullanıcısının erişmesi için izinleri ayarlayın
+Dosyaya sadece root kullanıcısının erişmesi için izinleri ayarlayın
 ```bash
 sudo chmod 600 /swapfile
 ```
-# Dosyayı swap alanı olarak formatlayın
+Dosyayı swap alanı olarak formatlayın
 ```bash
 sudo mkswap /swapfile
 ```
-# Swap alanını etkinleştirin
+Swap alanını etkinleştirin
 ```bash
 sudo swapon /swapfile
 ```
-# Kalıcı yapmak için /etc/fstab dosyasına şu satırı ekleyebilirsiniz:
+Kalıcı yapmak için /etc/fstab dosyasına şu satırı ekleyebilirsiniz:
 ```
 /swapfile none swap sw 0 0
 ```
-## 2. LXDE Masaüstü Kurulumu ve Yeni Kullanıcı Ekleme
+## 2. LXDE Masaüstü Kurulumu ve Yeni Kullanıcı Ekleme ##
 
 Yeni bir kullanıcı oluşturun(örnek kullanıcı adı: `k`):
 
 ```bash
 sudo adduser k 
 ```
-
 Yeni kullanıcıya sudo yetkisi verin:
 ```bash
 sudo usermod -aG sudo k
@@ -67,13 +66,11 @@ Burada varsayılan ekran yöneticisi olarak LightDM’i seçebilirsiniz.
 
 ## 4. XRDP Kurulumu
 
-1. **XRDP kurun**:
-
-   ```bash
+XRDP kurun
+```bash
    sudo apt install xrdp -y 
 ```
-
-**XRDP başlangıç dosyasını düzenleyin:**
+XRDP başlangıç dosyasını düzenleyin
 ```bash
 sudo nano /etc/xrdp/startwm.sh
 ```
