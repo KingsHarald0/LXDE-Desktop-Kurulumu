@@ -15,7 +15,7 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install curl iptables build-essential git wget jq make gcc nano tmux htop nvme-cli pkg-config libssl-dev libleveldb-dev tar clang bsdmainutils ncdu unzip libleveldb-dev screen -y
 ```
 
-## SwapSpace oluşturma(Opsiyonel) ##
+### SwapSpace oluşturma(Opsiyonel) ###
 > **Not**: Düşük kapasiteli sunucularda ram yükünü azaltmanıza yardımcı olur.
 
 Var olan swap alanını kapatın
@@ -101,6 +101,8 @@ sudo ufw allow 3389/tcp
 ## 5. Tarayıcı Kurulumu ##
 
 Chrome
+
 Brave
+
 Edge
 
