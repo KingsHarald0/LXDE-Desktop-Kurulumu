@@ -100,9 +100,9 @@ sudo ufw allow 3389/tcp
 ```
 ## 5. Tarayıcı Kurulumu ##
 
-Chrome
+[Chrome](https://github.com/KingsHarald0/LXDE-Desktop-Kurulumu/blob/main/Taray%C4%B1c%C4%B1lar.md#chrome)
 
-Brave
+[Brave](https://github.com/KingsHarald0/LXDE-Desktop-Kurulumu/blob/main/Taray%C4%B1c%C4%B1lar.md#brave)
 
-Edge
+[Edge](https://github.com/KingsHarald0/LXDE-Desktop-Kurulumu/blob/main/Taray%C4%B1c%C4%B1lar.md#edge)
 
