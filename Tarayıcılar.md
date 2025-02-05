@@ -43,7 +43,11 @@ sudo apt install brave-browser -y
 Microsoft’un imza anahtarını indirin ve sisteme ekleyin
 ```bash
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+```
+```bash
 sudo install -o root -g root -m 644 microsoft.gpg /usr/share/keyrings/
+```
+```bash
 rm microsoft.gpg
 ```
 Microsoft Edge deposunu ekleyin
