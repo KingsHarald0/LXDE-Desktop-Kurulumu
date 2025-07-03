@@ -42,7 +42,7 @@ Kalıcı yapmak için /etc/fstab dosyasına şu satırı ekleyebilirsiniz:
 ```
 /swapfile none swap sw 0 0
 ```
-## 2. LXDE Masaüstü Kurulumu ve Yeni Kullanıcı Ekleme ##
+### 2. LXDE Masaüstü Kurulumu ve Yeni Kullanıcı Ekleme ###
 
 Yeni bir kullanıcı oluşturun(örnek kullanıcı adı: `k`):
 
